@@ -1,0 +1,30 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
+    <!-- <script type="text/javascript" src="{{ url_for('static',filename='js/base.js')}}"></script> -->
+</head>
+<body>
+    <div class="wrapper">
+        <form action='/process' method='post'>
+            <label class="name">Your Name:</label><input type='text' name='name'><br/>
+            <label class="loc">Dojo Location:</label>
+            <select name="location">
+                <option value="San Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Dallas">Dallas</option>
+                <option value="Washington D.C.">Washington D.C.</option>
+            </select><br/>
+            <label class="lang">Favorite Language:</label>
+            <select name="language" style="margin-left: 12px;">
+                <option value="javascript">Javascript</option>
+                <option value="python">python</option>
+            </select><br/>
+            <label class="comm">Comment (optional):</label><br/>
+            <textarea name="comments" rows="5" cols="50"></textarea><br/>
+            <button type="submit" value="button">Button</button>
+        </form>
+    </div>
+</body>
+</html>

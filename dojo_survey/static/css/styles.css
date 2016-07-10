@@ -1,0 +1,50 @@
+h2 { text-decoration: underline; }
+span  {
+    text-align: right;
+    padding: 5px;
+}
+.go {
+    float: right;
+    width: 70px;
+    margin-top: 40px;
+    /*border-radius: 5px;*/
+}
+.wrapper-result {
+    width: 400px;
+    outline: 1px solid black;
+    margin: 15% auto;
+    padding: 20px 20px 25px 20px;
+    height: 200px;
+}
+body {
+  font-family: "times new roman";
+}
+input, select, button { margin: 5px 0; }
+label, textarea {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+input, select {
+    width: 200px;
+}
+.wrapper, .wrapper-result{
+    box-shadow: 15px 15px 10px gray;
+    width: 400px;
+    outline: 1px solid black;
+    margin: 15% auto;
+    padding: 20px 20px 25px 20px;
+}
+.name { margin-right:90px;}
+.name-result { margin-right: 125px;}
+.loc { margin-right: 70px; }
+.lang { margin-right: 30px; }
+.lang-result { margin-right: 35px;}
+.comm-result { margin-right: 97px; }
+button {
+    box-shadow: 5px 5px 5px blue;
+    width: 70px;
+    margin: 10px 20px 10px 0;
+    margin-right: 20px;
+    float: right;
+    color: black;
+}

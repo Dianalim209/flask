@@ -1,0 +1,46 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
+    <!-- <script type="text/javascript" src="{{ url_for('static',filename='js/base.js')}}"></script> -->
+</head>
+  <body>
+      <div class="container">
+        <h1>Coding Dojo Survey</h1>
+        <div id="form-wrap">
+          <form action='/results' method='post'>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                  <p>{{message}}</p>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+              <p>Your Name:<input type='text' name='name' placeholder="Full Name"></p>
+              <p>Dojo Location:
+                <select name="location">
+                  <option value="San Jose">San Jose</option>
+                  <option value="Seattle">Seattle</option>
+                  <option value="Dallas">Dallas</option>
+                  <option value="Washington D.C.">Washington D.C.</option>
+                </select>
+              </p>
+              <p>Favorite Language:
+                <select name="language" style="margin-left: 12px;">
+                  <option value="Javascript">Javascript</option>
+                  <option value="Python">Python</option>
+                  <option value="PHP">PHP</option>
+                  <option value="Ruby On Rails">Ruby on Rails</option>
+                </select>
+              </p>
+              <p>Comments: 
+              <textarea name="comments"></textarea>
+              </p>
+              <button type="submit" value="button">Submit</button>
+              <div class="clr"></div>
+          </form>
+        </div>
+      </div>
+    </body>
+</html>

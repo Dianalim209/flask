@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/local.css') }}">
+    </head>
+    <body>
+    	<div class="container">
+    		<h1> Register for Patch Match </h1>
+
+    		<form action="/registered" method="post">
+	    		{% with messages = get_flashed_messages() %}
+				    {% if messages %}
+				      {% for message in messages %}
+				        <p>{{message}}</p>
+				      {% endfor %}
+				    {% endif %}
+				  {% endwith %}
+    			<input type="hidden" value="register" name="action">
+    			<label for="email"> Email: </label><input type="text" name="email" value = "{{ request.form['email'] }}"><br>
+    			<label for="first_name"> First Name: </label><input type="text" name="first_name" value = "{{ request.form['first_name'] }}"><br>
+    			<label for="last_name"> Last Name: </label><input type="text" name="last_name" value = "{{ request.form['last_name'] }}"><br>
+    			<label for="birth_date"> DOB: </label><input type="text" name="birth_date" placeholder="(mm/dd/yyyy)"><br>
+    			<label for="password"> Password: </label><input type="password" name="password"><br>
+    			<label for="confirm_password"> Confirm Password: </label><input type="password" name="confirm_password">
+    			<input type="submit" name="submit" value="submit">
+    		</form>
+    	</div>
+
+    </body>
+</html>
+Status API Training Shop Blog About

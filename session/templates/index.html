@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Test Index</title>
+  </head>
+  <body>
+    <h1>Index Page</h1>
+    <h3>Create a User</h3>
+    <form action='/users' method="post">
+      <!-- we want the form action and method to match the /users route -->
+      Name: <input type='text' name='name'><br>
+      Email: <input type='text' name='email'><br>
+      <input type="submit" value="create user">
+    </form>
+  </body>
+</html>
